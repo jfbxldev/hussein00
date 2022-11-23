@@ -1,0 +1,57 @@
+.plaquette-hexa {
+  // border: solid red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px;
+  
+  svg{
+    height: 300px;
+    width: 300px;
+  }
+
+  .texte {
+ 
+    padding: 20px;
+  }
+
+  @include responsive-md {
+  // border: solid violet;
+   flex-direction: row;
+   justify-content: space-around;
+  
+    .texte {
+      width: 50%;
+      font-size: 20px;
+    }
+    svg{
+      height: auto;
+      width: 30vw;
+    }
+  
+  }
+
+  @include responsive-lg {
+    // border: solid blue;
+    // .texte {
+    //   font-size: 25px;
+    // }
+    svg{
+      height: auto;
+      width: 20vw;
+    }
+  }
+
+  @include responsive-xl {
+    // border: solid green;
+     max-width: 60vw;
+     .texte {
+      font-size: 30px;
+    }
+  svg{
+        height: 450px;
+        width: 450px;
+      }
+     
+   }
+}

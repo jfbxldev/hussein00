@@ -1,0 +1,245 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: roboto, sans-serif;
+  color: #333;
+}
+
+.phone-link {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 32px;
+  text-decoration: none;
+  background: #2f9637;
+  color: #f1f1f1;
+  border-radius: 60px;
+  padding: 15px 25px;
+}
+.phone-link span {
+  padding-right: 50px;
+}
+.phone-link img {
+  width: 32px;
+  height: 32px;
+}
+
+.phone-link:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#phone-icon {
+  fill: whitesmoke;
+}
+
+.plaquette-hexa {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px;
+}
+.plaquette-hexa svg {
+  height: 300px;
+  width: 300px;
+}
+.plaquette-hexa .texte {
+  padding: 20px;
+}
+@media screen and (min-width: 769px) {
+  .plaquette-hexa {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .plaquette-hexa .texte {
+    width: 50%;
+    font-size: 20px;
+  }
+  .plaquette-hexa svg {
+    height: auto;
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .plaquette-hexa svg {
+    height: auto;
+    width: 20vw;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .plaquette-hexa {
+    max-width: 60vw;
+  }
+  .plaquette-hexa .texte {
+    font-size: 30px;
+  }
+  .plaquette-hexa svg {
+    height: 450px;
+    width: 450px;
+  }
+}
+
+/* Navigation */
+nav {
+  top: 0;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  background-color: brown;
+  /* au dessus de home */
+  z-index: 10;
+}
+
+nav a {
+  color: #f0f0e5;
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #4e6681;
+}
+
+nav a:hover::after {
+  background: #fff;
+}
+
+nav a:hover {
+  transform: translateY(1px);
+}
+
+header {
+  height: 25vh;
+}
+@media screen and (min-width: 769px) {
+  header {
+    height: 45vh;
+  }
+}
+
+footer {
+  background-color: #666;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-section {
+  margin: 20px 50px;
+  flex-basis: auto;
+}
+footer .footer-section .footer-title {
+  padding-bottom: 20px;
+}
+footer .footer-section ul {
+  margin-left: 20px;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+footer .footer-section li {
+  flex: auto;
+}
+footer .footer-section .form-contact input[type=email], footer .footer-section .form-contact textarea {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  border: 0;
+  background-color: #e2e1dc;
+  width: 100%;
+}
+footer .footer-section .form-contact input[type=email]:focus, footer .footer-section .form-contact textarea:focus {
+  outline: none !important;
+  background-color: #ffd969;
+  border-color: #000;
+}
+footer .footer-section .form-contact button {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  padding: 10px;
+  border: none;
+  background-color: #3F51B5;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  width: 100%;
+}
+@media screen and (min-width: 769px) {
+  footer {
+    flex-direction: row;
+  }
+  footer .footer-section {
+    padding: 20px 0;
+    flex-basis: 33vw;
+  }
+}
+
+header.home-page {
+  background: url("../assets/images/landscape01-sm.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 769px) {
+  header.home-page {
+    background: url("../assets/images/landscape01-md.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media screen and (min-width: 1025px) {
+  header.home-page {
+    background: url("../assets/images/landscape01-lg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+main.home-page {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+main.home-page h1 {
+  font-family: Montserrat, sans-serif;
+  padding-top: 50px;
+  padding-bottom: 35px;
+  font-size: clamp(40px, 7vw, 110px);
+  text-transform: uppercase;
+  color: #666;
+  font-weight: 900;
+}
+main.home-page .subtitle {
+  font-family: roboto, sans-serif;
+  padding-bottom: 50px;
+  font-size: clamp(20px, 7vw, 60px);
+  text-transform: uppercase;
+  color: #666;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-align: center;
+}
+main.home-page .subtitle span {
+  margin: 20px;
+}/*# sourceMappingURL=style.css.map */

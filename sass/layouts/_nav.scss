@@ -1,0 +1,39 @@
+/* Navigation */
+nav {
+  // position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  // justify-content: center;
+  background-color:brown;
+  /* au dessus de home */
+  z-index: 10;
+  // min-height: 3vh;
+ 
+}
+
+nav a {
+  color: #f0f0e5;
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  // text-transform: uppercase;
+  position: relative;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #4e6681;
+}
+nav a:hover::after {
+  background: #fff;
+}
+
+nav a:hover {
+  transform: translateY(1px);
+}

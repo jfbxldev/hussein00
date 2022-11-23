@@ -1,0 +1,72 @@
+footer {
+  background-color: #666;
+  
+  display: flex;
+  flex-direction: column;
+  
+  .footer-section {
+    margin: 20px 50px;
+    flex-basis: auto;
+
+    .footer-title {
+      padding-bottom: 20px;
+    }
+    
+    ul {
+      margin-left: 20px;
+      height: 20vh;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    li {
+      flex: auto;
+    }
+
+    .form-contact{
+      input[type=email], textarea {
+        padding: 10px;
+        margin: 5px 0;
+        border-radius:10px;
+        border: 0;
+        // border-bottom:1px solid #eee;
+        background-color: #e2e1dc;
+        width: 100%;
+        &:focus {
+          outline:none !important;
+          background-color: #ffd969;
+          border-color: #000;
+        }
+      }
+      button {
+        appearance:none;
+        -webkit-appearance:none;
+  
+        padding:10px;
+        border:none;
+        background-color:#3F51B5;
+        color:#fff;
+        font-weight:600;
+        border-radius:10px;
+        width:100%;
+      }
+    }
+  }
+
+
+
+
+
+  
+  
+  @include responsive-md {
+    flex-direction: row;
+    .footer-section {
+      padding: 20px 0;
+      flex-basis: 33vw;
+    }
+
+  }
+ 
+}
+

@@ -1,0 +1,8 @@
+header {
+  height: 25vh;
+  // padding: 0 50px;
+  // position: relative;
+  @include responsive-md {
+    height: 45vh;
+  }
+}

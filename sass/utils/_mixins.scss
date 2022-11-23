@@ -1,0 +1,45 @@
+@mixin responsive-md {
+  @media screen and (min-width: map-get($breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin responsive-lg {
+  @media screen and (min-width: map-get($breakpoints, lg)) {
+    @content;
+  }
+}
+
+@mixin responsive-xl {
+  @media screen and (min-width: map-get($breakpoints, xl)) {
+    @content;
+  }
+}
+
+@mixin size-imagebackground-fit {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+@mixin background-responsive($image) {
+
+  background: url('../assets/images/' + $image + '-sm.jpg');
+  @include size-imagebackground-fit();
+
+
+  @include responsive-md {
+    background: url('../assets/images/' + $image + '-md.jpg');
+    @include size-imagebackground-fit();
+  }
+
+  @include responsive-lg {
+    background: url('../assets/images/' + $image + '-lg.jpg');
+    @include size-imagebackground-fit();
+  }
+
+
+
+
+}
